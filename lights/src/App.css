@@ -1,0 +1,191 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 32px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  max-height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background: #202025;
+  overflow: hidden;
+  margin: 0;
+}
+
+.light-crossing {
+  width: 100%;
+  height: 100vh;
+  background: #102010;
+  overflow: hidden;
+}
+
+.street {
+  background: #303035;
+  position: absolute;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+}
+
+.street.traffic.horizontal {
+  width: 100%;
+  height: 30vh;
+  top: 50%;
+  margin-top: -15vh;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.street.traffic.vertical {
+  width: 20%;
+  height: 100vh;
+  left: 50%;
+  margin-left: 0%;
+  z-index: 1;
+}
+
+.street.traffic.horizontal .centerline {
+  width: 100%;
+  height: 5%;
+  top: 50%;
+  margin-top: -1%;
+  background: repeating-linear-gradient(
+    90deg,
+    #0000,
+    #0000 60px,
+    #bbb 60px,
+    #bbb 120px
+  );
+  position: relative;
+}
+
+.street.traffic.vertical .centerline,
+.street.pedestrian .centerline {
+  width: 5%;
+  height: 100%;
+  left: 50%;
+  margin-left: -1%;
+  background: repeating-linear-gradient(
+    0deg,
+    #0000,
+    #0000 50px,
+    #bbb 50px,
+    #bbb 100px
+  );
+  position: relative;
+  z-index: 3;
+}
+
+.street.pedestrian {
+  background: #151010;
+  width: 8%;
+  height: 100vh;
+  left: 40%;
+  z-index: 1;
+}
+
+.street.crossing {
+  background: #303035;
+  margin-left: 0;
+  height: 30vh;
+  left: 40%;
+  width: 6%;
+  display: inline-block;
+  padding: 0% 1% 0% 1%;
+}
+
+.street.crossing .stripe {
+  background: #bbb;
+  height: 2vh;
+  margin-top: 2vh;
+}
+
+.traffic-light {
+  background: #000000;
+  padding: 8px 4px 8px 4px;
+  margin: 0px;
+  display: inline-block;
+}
+
+.traffic-light > .light {
+  width: 32px;
+  height: 32px;
+  margin: 6px;
+  border-radius: 16px;
+  transition: 0.5s all ease-in-out;
+}
+
+.traffic-light .light.red {
+  background: red;
+  box-shadow: 0px 0px 20px 2px red;
+}
+.traffic-light .light.yellow {
+  background: orange;
+  box-shadow: 0px 0px 20px 2px orange;
+}
+.traffic-light .light.green {
+  background: green;
+  box-shadow: 0px 0px 20px 2px green;
+}
+
+#trafficSign {
+  position: absolute;
+  left: 30%;
+  top: -5%;
+  z-index: 10;
+  transform: rotate(90deg);
+}
+
+#pedestrianSign {
+  position: absolute;
+  left: 5%;
+  top: 70%;
+  z-index: 10;
+}
+
+#walkButton {
+  top: 5%;
+  left: 2%;
+  position: absolute;
+  z-index: 20;
+}
+
+pre {
+  color: white;
+  text-align: left;
+  top: 7%;
+  left: 2%;
+  position: absolute;
+  z-index: 20;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "signald",
+  "version": "1.0.0",
+  "description": "",
+  "main": "theme.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "aedes": "^0.50.0",
+    "daemonize-process": "^3.0.0",
+    "minimist": "^1.2.8",
+    "websocket-stream": "^5.5.2",
+    "xstate": "^4.38.2"
+  },
+  "_moduleAliases": {
+    "@src": "build/shared/src"
+  }
+}

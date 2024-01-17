@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background: #202050;
+}
+
+.walk-button {
+  background: white;
+  width: 50%;
+  aspect-ratio: 1/1;
+  left: 25%;
+  top: 20%;
+  border-radius: 100%;
+  position: absolute;
+}
